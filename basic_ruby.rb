@@ -45,10 +45,19 @@ test_array=([100,200,-100])
 puts find_max2(test_array)      
 
 def hash(x,y)
-	Hash[x.zip(y)]
+	puts Hash[x.zip(y)]
 end
+hash([:toyota, :tesla],["prius","model S"])
 
-puts hash([:toyota, :tesla],["prius","model S"])
+def combine_array_in_hash(a1,a2)
+  new_hash = {}
+  for i in 0..a1.length-1
+    key = a1[i]
+    new_hash[key] = a2[i]
+  end
+  new_hash
+end
+puts combine_array_in_hash([:toyota, :tesla],["prius","model S"])
 
 def fizzbuzz()
   for i in 1..100
